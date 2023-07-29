@@ -1,0 +1,8 @@
+<div class="component-x-container">
+    <h2>{{ data.tabName }}</h2>
+    <button (click)="addComponentY()">+</button>
+    <div *ngFor="let componentYData of data.componentYDataList">
+      <app-component-y [data]="componentYData"></app-component-y>
+    </div>
+  </div>
+  

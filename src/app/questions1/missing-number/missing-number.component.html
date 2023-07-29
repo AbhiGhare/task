@@ -1,0 +1,10 @@
+<div>
+    <label for="index">Enter the index:</label>
+    <input type="number" id="index" [(ngModel)]="inputIndex" />
+    <button (click)="findMissingNumber()">Find Number</button>
+  </div>
+  
+  <div *ngIf="result !== null">
+    <p>Number at index {{ inputIndex }} is {{ result }}</p>
+  </div>
+  

@@ -1,0 +1,12 @@
+<form [formGroup]="phoneForm" (ngSubmit)="submitForm()">
+    <div formArrayName="phoneNumbers">
+      <div *ngFor="let phoneCtrl of phoneControls; let i = index" class="phone-input-group">
+        <label>Phone Number {{ i + 1 }}:</label>
+        <input type="text" [formControl]="phoneCtrl">
+        <button type="button" (click)="removePhone(i)">Delete</button>
+      </div>
+    </div>
+    <button type="button" (click)="addPhone()">Add another phone number</button>
+    <button type="submit">Submit</button>
+  </form>
+  

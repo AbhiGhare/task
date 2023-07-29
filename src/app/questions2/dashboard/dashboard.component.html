@@ -1,0 +1,6 @@
+<div>
+    <button (click)="addComponentX()">Add Component X</button>
+    <div *ngFor="let componentXData of componentXDataList">
+      <app-component-x [data]="componentXData"></app-component-x>
+    </div>
+  </div>
